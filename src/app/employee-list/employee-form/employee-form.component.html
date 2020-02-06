@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #afafaf;
+  padding: 20px;
+}
+
+
+</style>
+<body bgcolor="#afafaf">
+
+<div>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <h1 style="text-align: center">Registration Form </h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4>Fields with <span style="color: red">*</span> are required fields</h4>   
+        <label>
+                FullName<span style="color: red">*</span>:
+                <input type="text" formControlName="fullname" required>
+        </label>
+        <label>
+                Email<span style="color: red">*</span>:
+                <input type="text" formControlName="email" required>
+        </label>
+        <label>
+                Mobile<span style="color: red">*</span>:
+                <input type="text" formControlName="mobile" required>
+        </label>
+        <label>
+                City<span style="color: red">*</span>:
+                <input type="text" formControlName="city" required><br><br>
+        </label>
+        <label>
+                Gender:<input type="radio" name="gender" value="male" formControlName="gender"> Male
+                <input type="radio" name="gender" value="female" formControlName="gender"> Female
+                <input type="radio" name="gender" value="other" formControlName="gender"> Other<br><br>
+        </label>
+        <label>
+                Department<span style="color: red">*</span>: 
+                <select name="Department" formControlName="department" required><option value="angular" type="text">Angular</option>
+                    <option value="dotnet" type="text">DotNet</option>
+                    </select> <br><br>
+        </label>
+        <label for="start">Hire date:
+                <input type="date" id="start" name="hiredate" value="2018-07-22" min="1900-01-01" max="3000-12-31"><br><br>
+        </label>
+        <label>
+            <input type="checkbox" id="Permanent-emp" name="Permanent-emp">
+            <label>Permanent Employee</label>    
+        </label><br><br>
+        
+        <div class="btn-group">
+        <button type="submit" [disabled]="profileForm.invalid">Add Record</button>&nbsp;&nbsp;
+        </div>
+        <button type="reset">Clear</button>
+        <p>
+           Form Status: {{ profileForm.status }}
+        </p>
+</form>
+</div>
+<br><br><br><br><br><br><br>
+</body>
+</html>
+
