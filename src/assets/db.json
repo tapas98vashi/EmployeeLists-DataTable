@@ -1,0 +1,83 @@
+{
+  "EmployeeData": [
+    {
+      "id": 2,
+      "fullname": "Mitul Patel",
+      "email": "mitul.patel@1rivet.com",
+      "mobile": "9429784104",
+      "city": "Valsad",
+      "department": "Angular"
+    },
+    {
+      "id": 3,
+      "fullname": "Khizar Shaikh",
+      "email": "khizar.shaikh@1rivet.com",
+      "mobile": "9429784105",
+      "city": "Valsad",
+      "department": "Angular"
+    },
+    {
+      "id": 5,
+      "fullname": "Ronak Patel",
+      "email": "ronak.patel@1rivet.com",
+      "mobile": "9429784109",
+      "city": "Valsad",
+      "department": "Angular"
+    },
+    {
+      "fullname": "Ketan prajapati",
+      "email": "ketan.prajapati@1rivet.com",
+      "mobile": "9429784108",
+      "city": "Navsari",
+      "gender": "male",
+      "department": "DotNet",
+      "date": "2020-02-03",
+      "permanentemp": "",
+      "id": 6
+    },
+    {
+      "fullname": "Sonik Kapadia",
+      "email": "sonik.kapadia@gmail.com",
+      "mobile": "9999999999",
+      "city": "Valsad",
+      "gender": "male",
+      "department": "angular",
+      "date": "2020-02-18",
+      "permanentemp": "",
+      "id": 9
+    },
+    {
+      "fullname": "Nitesh Sharma",
+      "email": "nitesh.sharma@rivet.com",
+      "mobile": "9898989899",
+      "city": "Valsad",
+      "gender": "male",
+      "department": "angular",
+      "date": "2020-02-03",
+      "permanentemp": "",
+      "id": 10
+    },
+    {
+      "fullname": "Tapas Vashi",
+      "email": "tapasvashi98@gmail.com",
+      "mobile": "9429784103",
+      "city": "Valsad",
+      "gender": "male",
+      "department": "angular",
+      "date": "2020-02-26",
+      "permanentemp": "",
+      "id": 11
+    },
+    {
+      "fullname": "Bhargav baleja",
+      "email": "bhargav@1rivet.com",
+      "mobile": "9090876543",
+      "city": "Navsari",
+      "gender": "male",
+      "department": "angular",
+      "date": "",
+      "permanentemp": "",
+      "id": 15
+    }
+  ]
+}

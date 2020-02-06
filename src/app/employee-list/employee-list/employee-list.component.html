@@ -1,0 +1,68 @@
+<body bgcolor="#afafaf">
+<style>
+    #employees {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #employees td, #employees th {
+      border: 1px  #ddd;
+      padding: 8px;
+    }
+
+    .button, .abc{
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }    
+
+    #employees tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #employees tr:hover {background-color: #ddd;}
+    
+    #employees th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+    <h1 style="text-align: center"><span style="color: red">1</span>Rivet Employee Lists</h1>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <button routerLink="add" style="font-size:15px" class="button">+ Add record</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p class="abc">Search:</p> <input type="text" [(ngModel)]= "query" style="font-size:15px" placeholder="Enter your text here">
+    <br><br>
+    <table id="employees">
+  <tr>
+      <th>Id</th>
+      <th>FullName<span (click)="toggleUp()"> &#x2195;</span></th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>City</th>
+      <th>Department</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  <tr *ngFor="let list of lists  | search:'fullname,email,mobile,city,department':query | sort: params: reverse">
+      <td>{{list.id}}</td>
+      <td>{{list.fullname}}</td>   
+      <td>{{list.email}}</td>
+      <td>{{list.mobile}}</td>
+      <td>{{list.city}}</td>
+      <td>{{list.department}}</td>
+      <td><button [routerLink]="['/edit',list.id]" style="font-size:20px">Edit <i class="material-icons">border_color</i></button></td>
+      <td><button (click)="delEmp(list.id)" style="font-size:20px" >Delete <i class="fa fa-trash-o"></i></button></td>
+      </tr>       
+</table>
+</body>
